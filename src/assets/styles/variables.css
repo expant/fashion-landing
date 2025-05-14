@@ -1,14 +1,19 @@
 :root {
   --font-family: "Poppins", sans-serif;
-  --fint-size-2xl: 112px;
+
+  --font-size-desktop: 1.25vw; /* 24px */
+  --font-size-tablet: 2.34vw; /* 18px */
+  --font-size-mobile: 5vw; /* 16px */
 
   --color-accent-yellow: #ebd96b;
   --color-accent-gold: #e5c643;
-  --color-neutral-0: #ffffff; /* белый */
+
+  --color-neutral-0: #ffffff; /* Белый */
   --color-neutral-50: #fffcf8; /* Почти белый */
   --color-neutral-400: #8e8e8e; /* Средний серый */
   --color-neutral-800: #242323; /* Тёмно-серый */
   --color-neutral-900: #000000; /* Чёрный */
+
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #ebd96b;
 }
