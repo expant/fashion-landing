@@ -1,10 +1,14 @@
 <script setup>
 import HeaderItem from "@/components/HeaderItem.vue";
+import HeroItem from "@/sections/HeroItem.vue";
 </script>
 
 <template>
   <div class="layout">
     <HeaderItem />
+    <main class="main">
+      <HeroItem />
+    </main>
   </div>
 </template>
 
