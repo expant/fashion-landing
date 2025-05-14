@@ -1,33 +1,41 @@
 <script setup>
 import BrandIcon from "./icons/BrandIcon.vue";
+
+const brandTitle = "FASHION";
+const navItems = [
+  { id: 1, title: "CATALOGUE", link: "#" },
+  { id: 2, title: "FASHION", link: "#" },
+  { id: 3, title: "FAVOURITE", link: "#" },
+  { id: 4, title: "LIFESTYLE", link: "#" },
+];
+
 </script>
 
 <template>
   <header class="header">
+
     <div class="header__brand">
       <a href="/">
         <BrandIcon class="header__logo" />
-        <span class="header__title">FASHION</span>
+        <span class="header__title">{{ brandTitle }}</span>
       </a>
     </div>
+
     <div class="header__right-side">
       <nav class="header__nav">
-        <div class="header__nav-item">
-          <a href="#" class="header__nav-link">CATALOGUE</a>
-        </div>
-        <div class="header__nav-item">
-          <a href="#" class="header__nav-link">FASHION</a>
-        </div>
-        <div class="header__nav-item">
-          <a href="#" class="header__nav-link">FAVOURITE</a>
-        </div>
-        <div class="header__nav-item">
-          <a href="#" class="header__nav-link">LIFESTYLE</a>
+        <div 
+          class="header__nav-item"
+          v-for="item in navItems"
+          :key="item.id"
+        >
+          <a :href="item.link" class="header__nav-link">{{ item.title }}</a>
         </div>
       </nav>
+  
       <!-- TODO: Анимирировать hover у кнопки -->
       <button class="header__sign-up">SIGN UP</button>
     </div>
+
   </header>
 </template>
 
