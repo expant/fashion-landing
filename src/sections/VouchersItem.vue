@@ -43,7 +43,7 @@ import googlePlayImg from "@/assets/images/vouchers/google-play.png";
 
 .vouchers {
   justify-content: center;
-  margin-bottom: 8.75rem;
+  margin-bottom: 5.1rem;
 }
 
 .vouchers__content {
