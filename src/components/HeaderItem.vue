@@ -8,12 +8,10 @@ const navItems = [
   { id: 3, title: "FAVOURITE", link: "#" },
   { id: 4, title: "LIFESTYLE", link: "#" },
 ];
-
 </script>
 
 <template>
   <header class="header">
-
     <div class="header__brand">
       <a href="/">
         <BrandIcon class="header__logo" />
@@ -23,19 +21,14 @@ const navItems = [
 
     <div class="header__right-side">
       <nav class="header__nav">
-        <div 
-          class="header__nav-item"
-          v-for="item in navItems"
-          :key="item.id"
-        >
+        <div class="header__nav-item" v-for="item in navItems" :key="item.id">
           <a :href="item.link" class="header__nav-link">{{ item.title }}</a>
         </div>
       </nav>
-  
+
       <!-- TODO: Анимирировать hover у кнопки -->
       <button class="header__sign-up">SIGN UP</button>
     </div>
-
   </header>
 </template>
 
@@ -54,7 +47,7 @@ const navItems = [
 
 .header {
   margin: 0 auto;
-  padding: 1.917rem 4.17rem 2.3rem;
+  padding: 1.917rem 4.17rem 2.7rem;
 }
 
 .header__logo {
@@ -65,14 +58,15 @@ const navItems = [
   font-size: 1.7rem;
   font-weight: 900;
   margin-left: 0.5417rem;
+  letter-spacing: 0.026rem;
 }
 
 .header__right-side {
-  gap: 2.25rem;
+  gap: 2.4rem;
 }
 
 .header__nav {
-  gap: 2.708rem;
+  gap: 2.89rem;
 }
 
 .header__nav-item,
@@ -86,7 +80,7 @@ const navItems = [
 
 .header__sign-up {
   font-size: 1rem;
-  padding: 0.917rem;
+  padding: 0.56rem 0.85rem;
   background-color: var(--color-neutral-900);
   border-radius: 0.2917rem;
   color: var(--color-neutral-0);
