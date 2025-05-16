@@ -3,10 +3,18 @@
 <template>
   <section class="community">
     <div class="community__content">
-      <h3 class="community__title">JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO</h3>
-      <p class="community__description">Type your email down below and be young wild generation</p>
+      <h3 class="community__title">
+        JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO
+      </h3>
+      <p class="community__description">
+        Type your email down below and be young wild generation
+      </p>
       <form class="community__form" action="#">
-        <input class="community__form-email-input" type="text" placeholder="Add your email here">
+        <input
+          class="community__form-email-input"
+          type="text"
+          placeholder="Add your email here"
+        />
         <button class="community__form-btn" type="submit">SEND</button>
       </form>
     </div>
@@ -23,7 +31,7 @@
 .community__content {
   max-width: 42.5rem;
   text-align: center;
-  margin: 5.7rem 0 6.71rem;
+  margin: 5.85rem 0 6.5rem;
 }
 
 .community__title {
@@ -31,7 +39,7 @@
   font-weight: 900;
   line-height: 2.9rem;
   letter-spacing: 0.07rem;
-  color: var(--color-neutral-0)
+  color: var(--color-neutral-0);
 }
 
 .community__description {
@@ -40,7 +48,7 @@
   margin: 0.66rem 0 1.51rem;
   margin-right: 0.55rem;
   letter-spacing: 0.056rem;
-  color: var(--color-neutral-50)
+  color: var(--color-neutral-50);
 }
 
 .community__form {
