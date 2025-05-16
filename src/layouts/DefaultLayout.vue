@@ -38,7 +38,6 @@ html {
   }
 }
 
-/* Смартфоны (320px–767px) */
 @media (max-width: 767px) {
   html {
     font-size: var(--font-size-mobile);

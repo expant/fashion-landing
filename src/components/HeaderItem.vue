@@ -26,7 +26,6 @@ const navItems = [
         </div>
       </nav>
 
-      <!-- TODO: Анимирировать hover у кнопки -->
       <button class="header__sign-up">SIGN UP</button>
     </div>
   </header>
@@ -84,5 +83,14 @@ const navItems = [
   background-color: var(--color-neutral-900);
   border-radius: 0.2917rem;
   color: var(--color-neutral-0);
+}
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 1rem 3rem 2rem;
+  }
+}
+
+@media (max-width: 767px) {
 }
 </style>
