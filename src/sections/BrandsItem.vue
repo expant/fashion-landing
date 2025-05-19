@@ -81,4 +81,46 @@
 .brands__item-amazon {
   width: 8rem;
 }
+
+@media (max-width: 1023px) {
+  .brands {
+    gap: 3rem;
+  }
+
+  .brands__item-hnm {
+    width: 3rem;
+  }
+
+  .brands__item-obey {
+    width: 3rem;
+  }
+
+  .brands__item-shopify {
+    width: 4rem;
+  }
+
+  .brands__item-lacoste {
+    width: 5.5rem;
+  }
+
+  .brands__item-levis {
+    width: 3rem;
+  }
+
+  .brands__item-amazon {
+    width: 6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .brands {
+    gap: 2rem;
+    margin: 1.5rem 0 2rem;
+    padding: 1rem 4rem;
+    background-color: var(--color-bg-secondary);
+  }
+}
+
+@media (max-width: 400px) {
+}
 </style>
