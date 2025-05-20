@@ -28,7 +28,7 @@ import NewArrivalsItem from "@/sections/NewArrivalsItem.vue";
 </template>
 
 <style>
-/* html {
+html {
   font-size: 24px;
 }
 
@@ -36,11 +36,11 @@ import NewArrivalsItem from "@/sections/NewArrivalsItem.vue";
   html {
     font-size: var(--font-size-desktop);
   }
-} */
-
-html {
-  font-size: var(--font-size-desktop);
 }
+
+/* html {
+  font-size: var(--font-size-desktop);
+} */
 
 @media (max-width: 1023px) {
   html {

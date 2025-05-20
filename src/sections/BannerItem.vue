@@ -229,6 +229,8 @@ import girlImg from "@/assets/images/banner-girl.png";
 
   .banner__btn {
     font-size: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.5rem 1.5rem;
   }
 
