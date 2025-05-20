@@ -35,4 +35,4 @@ npm run preview
 
 ### 🌐 Live Deployment
 
-🔗 View Live Site
+[🔗 View Live Site](https://fashion-landing-woad.vercel.app/)
