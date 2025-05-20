@@ -173,11 +173,17 @@ const cards = [
   }
 
   .new-arrivals__title {
+    display: block;
+    text-align: center;
     margin-bottom: 2rem;
   }
 
   .new-arrivals__title-text {
     font-size: 1rem;
+  }
+
+  .new-arrivals__title-img {
+    right: 3.2rem;
   }
 
   .new-arrivals__cards {
