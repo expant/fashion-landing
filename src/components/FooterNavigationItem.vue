@@ -43,4 +43,14 @@ const props = defineProps({
 .footer__nav-item:hover {
   color: #d9d9d9;
 }
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 767px) {
+  .footer__nav-title,
+  .footer__nav-item {
+    font-size: 0.75rem;
+  }
+}
 </style>

@@ -82,4 +82,38 @@ import googlePlayImg from "@/assets/images/vouchers/google-play.png";
 .vouchers__img {
   width: 27.96rem;
 }
+
+@media (max-width: 1023px) {
+  .vouchers {
+    text-align: center;
+  }
+
+  .vouchers__img {
+    display: none;
+  }
+
+  .vouchers__stores {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .vouchers {
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .vouchers__title {
+    font-size: 1.3rem;
+  }
+
+  .vouchers__description {
+    font-size: 0.8rem;
+  }
+
+  .vouchers__stores-img {
+    width: 6rem;
+  }
+}
 </style>

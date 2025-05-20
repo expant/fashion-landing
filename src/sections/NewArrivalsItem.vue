@@ -130,4 +130,77 @@ const cards = [
   color: #7f7f7f;
   letter-spacing: -0.04rem;
 }
+
+@media (max-width: 1023px) {
+  .new-arrivals {
+    margin: 0 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .new-arrivals__title {
+    margin-bottom: 2rem;
+  }
+
+  .new-arrivals__title-text {
+    font-size: 1.3rem;
+  }
+
+  .new-arrivals__cards {
+    gap: 1rem;
+  }
+
+  .new-arrivals__card {
+    gap: 0.6rem;
+  }
+
+  .new-arrivals__card-img {
+    width: 11rem;
+  }
+
+  .new-arrivals__card-title {
+    font-size: 0.8rem;
+  }
+
+  .new-arrivals__card-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .new-arrivals {
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .new-arrivals__title {
+    margin-bottom: 2rem;
+  }
+
+  .new-arrivals__title-text {
+    font-size: 1rem;
+  }
+
+  .new-arrivals__cards {
+    flex-direction: column;
+  }
+
+  .new-arrivals__card {
+    gap: 0.8rem;
+  }
+
+  .new-arrivals__card-img {
+    width: 100%;
+  }
+
+  .new-arrivals__card-title {
+    font-size: 1rem;
+  }
+
+  .new-arrivals__card-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+}
 </style>

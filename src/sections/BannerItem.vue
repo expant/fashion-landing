@@ -162,4 +162,85 @@ import girlImg from "@/assets/images/banner-girl.png";
   background-color: var(--color-neutral-900);
   border-radius: 0.34rem;
 }
+
+@media (max-width: 1023px) {
+  .banner {
+    display: block;
+    height: auto;
+  }
+
+  .banner__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+
+  .banner__description,
+  .banner__date,
+  .banner__terms {
+    font-size: 1.3rem;
+  }
+
+  .banner__text {
+    padding: 2rem 3rem;
+  }
+
+  .banner__img {
+    display: none;
+  }
+
+  .banner__star {
+    display: none;
+  }
+
+  .rectangle_white {
+    top: 0.1rem;
+    left: -0.8rem;
+    width: 19rem;
+    height: 4.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    height: auto;
+  }
+
+  .banner__title {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  .banner__text {
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .banner__description,
+  .banner__date,
+  .banner__terms {
+    font-size: 0.7rem;
+  }
+
+  .banner__description {
+    line-height: 1rem;
+    margin: 1rem 0;
+  }
+
+  .banner__btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .rectangle_white {
+    top: 0.1rem;
+    left: 2rem;
+    width: 14rem;
+    height: 3.2rem;
+    rotate: 0deg;
+  }
+}
+
+@media (max-width: 400px) {
+}
 </style>

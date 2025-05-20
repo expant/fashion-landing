@@ -11,4 +11,16 @@
   width: 1.3rem;
   fill: #797979;
 }
+
+@media (max-width: 1023px) {
+  .arrow {
+    width: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .arrow {
+    width: 1rem;
+  }
+}
 </style>

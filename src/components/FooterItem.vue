@@ -126,4 +126,44 @@ const navigation = [
   gap: 7.95rem;
   margin-top: 0.4rem;
 }
+
+@media (max-width: 1023px) {
+  .footer {
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .footer__nav {
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer__contacts {
+    text-align: center;
+  }
+
+  .contacts__title {
+    font-size: 1.4rem;
+  }
+
+  .contacts__text {
+    font-size: 0.9rem;
+  }
+
+  .contacts__links {
+    justify-content: center;
+  }
+
+  .footer__nav {
+    gap: 0.5rem;
+  }
+}
 </style>

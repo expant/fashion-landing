@@ -86,4 +86,47 @@
   color: var(--color-neutral-0);
   z-index: 200;
 }
+
+@media (max-width: 1023px) {
+  .community__content {
+    max-width: 35rem;
+    margin: 3rem 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .community__content {
+    max-width: 19rem;
+    margin: 2rem 1rem;
+  }
+
+  .community__title {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  .community__description {
+    font-size: 0.7rem;
+  }
+
+  .community__form {
+    width: 100%;
+  }
+
+  .community__form-email-input {
+    font-size: 0.7rem;
+    padding: 0.7rem 5.5rem 0.7rem 0.9rem;
+    border-radius: 0.3rem;
+  }
+
+  .community__form-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 1.3rem;
+    letter-spacing: 0.04rem;
+    border-radius: 0.3rem;
+  }
+}
 </style>

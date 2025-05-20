@@ -118,4 +118,82 @@ const cards = [
   color: #7f7f7f;
   letter-spacing: -0.04rem;
 }
+
+@media (max-width: 1023px) {
+  .favourite {
+    margin: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .favourite__title {
+    margin-bottom: 2rem;
+  }
+
+  .favourite__title-text {
+    font-size: 1.3rem;
+  }
+
+  .favourite__cards {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .favourite__card {
+    gap: 0.6rem;
+  }
+
+  .favourite__card-img {
+    width: 18rem;
+  }
+
+  .favourite__card-title {
+    font-size: 0.8rem;
+  }
+
+  .favourite__card-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .favourite {
+    margin: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .favourite__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .favourite__title-text {
+    font-size: 1rem;
+  }
+
+  .favourite__title-img {
+    right: 2rem;
+  }
+
+  .favourite__cards {
+    flex-direction: column;
+    gap: 2.3rem;
+  }
+
+  .favourite__card {
+    gap: 0.8rem;
+  }
+
+  .favourite__card-img {
+    width: 100%;
+  }
+
+  .favourite__card-title {
+    font-size: 1rem;
+  }
+
+  .favourite__card-text {
+    font-size: 0.7rem;
+  }
+}
 </style>
