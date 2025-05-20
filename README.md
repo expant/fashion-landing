@@ -15,8 +15,8 @@
 ### ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/fashion-site.git
-cd fashion-site
+git clone https://github.com/expant/fashion-landing.git
+cd fashion-landing
 npm install
 ```
 
