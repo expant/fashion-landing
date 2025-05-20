@@ -1,4 +1,5 @@
 <script setup>
+import BaseButton from "@/components/ui/BaseButton.vue";
 import StarIcon from "@/components/icons/StarIcon.vue";
 import girlImg from "@/assets/images/banner-girl.png";
 </script>
@@ -24,7 +25,7 @@ import girlImg from "@/assets/images/banner-girl.png";
       </p>
       <div class="banner__date">1 June - 10 June 2021</div>
       <div class="banner__terms">*Terms & Conditions apply</div>
-      <button class="banner__btn">SHOP NOW</button>
+      <base-button class="banner__btn">SHOP NOW</base-button>
     </div>
   </section>
 </template>
@@ -152,7 +153,6 @@ import girlImg from "@/assets/images/banner-girl.png";
 }
 
 .banner__btn {
-  display: inline-block;
   font-size: 1.1625rem;
   font-weight: 600;
   letter-spacing: 0.03rem;

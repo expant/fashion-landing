@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import BaseButton from "@/components/ui/BaseButton.vue";
+</script>
 
 <template>
   <section class="community">
@@ -16,6 +18,7 @@
           placeholder="Add your email here"
         />
         <button class="community__form-btn" type="submit">SEND</button>
+        <base-button class="community__form-btn">SEND</base-button>
       </form>
     </div>
   </section>

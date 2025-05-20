@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import BaseButton from "@/components/ui/BaseButton.vue";
+</script>
 
 <template>
   <section class="hero">
@@ -15,7 +17,8 @@
       CLOTHES.
     </h1>
     <p class="hero__text">Live for Influential and Innovative fashion!</p>
-    <button class="hero__btn">Shop Now</button>
+    <!-- <button class="hero__btn">Shop Now</button> -->
+    <base-button class="hero__btn">Shop Now</base-button>
     <img
       class="hero_img"
       src="../assets/images/hero_girl.png"
@@ -52,8 +55,6 @@
 }
 
 .hero__btn {
-  display: inline-block;
-  width: auto;
   font-size: 1.25rem;
   font-weight: 500;
   margin-top: 0.45rem;
