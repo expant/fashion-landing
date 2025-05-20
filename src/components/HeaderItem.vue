@@ -3,6 +3,7 @@ import { onMounted } from "vue";
 import BrandIcon from "./icons/BrandIcon.vue";
 import MenuIcon from "./icons/MenuIcon.vue";
 import CrossIcon from "./icons/CrossIcon.vue";
+import BaseButton from "./ui/BaseButton.vue";
 import { useMenuAnimations } from "../animations/composables/useMenuAnimations";
 
 const brandTitle = "FASHION";
@@ -53,7 +54,8 @@ onMounted(() => {
         </div>
       </nav>
 
-      <button class="header__sign-up">SIGN UP</button>
+      <!-- <button class="header__sign-up">SIGN UP</button> -->
+      <base-button class="header__sign-up">SIGN UP</base-button>
       <button
         class="header__menu-mobile-btn show-menu"
         @click="menuAnimations.showMenu"
@@ -102,8 +104,7 @@ onMounted(() => {
   gap: 2.89rem;
 }
 
-.header__menu-item,
-.header__sign-up {
+.header__menu-item {
   font-weight: 500;
 }
 
@@ -114,9 +115,7 @@ onMounted(() => {
 .header__sign-up {
   font-size: 1rem;
   padding: 0.56rem 0.85rem;
-  background-color: var(--color-neutral-900);
   border-radius: 0.2917rem;
-  color: var(--color-neutral-0);
 }
 
 .header__menu-mobile {

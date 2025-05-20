@@ -28,6 +28,16 @@ import NewArrivalsItem from "@/sections/NewArrivalsItem.vue";
 </template>
 
 <style>
+/* html {
+  font-size: 24px;
+}
+
+@media (max-width: 1690px) {
+  html {
+    font-size: var(--font-size-desktop);
+  }
+} */
+
 html {
   font-size: var(--font-size-desktop);
 }
