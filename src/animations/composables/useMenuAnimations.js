@@ -56,6 +56,28 @@ export function useMenuAnimations() {
     });
   };
 
+  const activateCircleElevation = (targetClassName) => {
+    const item = document.querySelector(`.${targetClassName}`);
+    const circle = item.querySelector(".circle");
+
+    initTimeline().to(circle, {
+      scale: 1,
+      opacity: 1,
+      duration: 0.3,
+    });
+  };
+
+  const deactivateCircleElevation = (targetClassName) => {
+    const item = document.querySelector(`.${targetClassName}`);
+    const circle = item.querySelector(".circle");
+
+    initTimeline().to(circle, {
+      scale: 0,
+      opacity: 0,
+      duration: 0.3,
+    });
+  };
+
   onMounted(() => {
     setMenu();
   });
@@ -66,5 +88,7 @@ export function useMenuAnimations() {
     hideMenu,
     scaleUpMenuItem,
     resetMenuItemScale,
+    activateCircleElevation,
+    deactivateCircleElevation,
   };
 }

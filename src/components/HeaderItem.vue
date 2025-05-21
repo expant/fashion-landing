@@ -48,14 +48,20 @@ const menuAnimations = useMenuAnimations();
       <div class="header__right-side">
         <nav class="header__menu">
           <div
-            class="header__menu-item"
             v-for="item in navItems"
             :key="item.id"
+            :class="`header__menu-item menu-item${item.id}`"
+            @mouseover="
+              menuAnimations.activateCircleElevation(`menu-item${item.id}`)
+            "
+            @mouseleave="
+              menuAnimations.deactivateCircleElevation(`menu-item${item.id}`)
+            "
           >
+            <div class="circle"></div>
             <a :href="item.link" class="header__menu-link">{{ item.title }}</a>
           </div>
         </nav>
-        <!-- <button class="header__sign-up">SIGN UP</button> -->
         <base-button class="header__sign-up">SIGN UP</base-button>
         <button
           class="header__menu-mobile-btn show-menu"
@@ -107,11 +113,28 @@ const menuAnimations = useMenuAnimations();
 }
 
 .header__menu-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.917rem;
   font-weight: 500;
 }
 
-.header__menu-item {
-  font-size: 0.917rem;
+.circle {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 100%;
+  scale: 0;
+  opacity: 0;
+  z-index: 100;
+}
+
+.header__menu-link {
+  position: relative;
+  z-index: 300;
 }
 
 .header__sign-up {
