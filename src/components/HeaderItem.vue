@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted } from "vue";
 import BrandIcon from "./icons/BrandIcon.vue";
 import MenuIcon from "./icons/MenuIcon.vue";
 import CrossIcon from "./icons/CrossIcon.vue";
@@ -15,10 +14,6 @@ const navItems = [
 ];
 
 const menuAnimations = useMenuAnimations();
-
-onMounted(() => {
-  menuAnimations.setMenu();
-});
 </script>
 
 <template>

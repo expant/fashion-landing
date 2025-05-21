@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { initTimeline } from "@/animations/utils/helpers.js";
+import { onMounted } from "vue";
 
 export function useMenuAnimations() {
   const setMenu = () => {
@@ -54,6 +55,10 @@ export function useMenuAnimations() {
       duration: 0.2,
     });
   };
+
+  onMounted(() => {
+    setMenu();
+  });
 
   return {
     setMenu,
