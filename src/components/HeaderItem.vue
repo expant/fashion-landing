@@ -1,4 +1,5 @@
 <script setup>
+import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import BrandIcon from "./icons/BrandIcon.vue";
 import MenuIcon from "./icons/MenuIcon.vue";
 import CrossIcon from "./icons/CrossIcon.vue";
@@ -17,48 +18,54 @@ const menuAnimations = useMenuAnimations();
 </script>
 
 <template>
-  <header class="header">
-    <nav class="header__menu-mobile">
-      <button class="hide-menu-btn hide-menu" @click="menuAnimations.hideMenu">
-        <CrossIcon class="hide-menu-icon" />
-      </button>
-      <div
-        v-for="item in navItems"
-        :key="item.id"
-        :class="`header__menu-mobile-item menu-mobile-item${item.id}`"
-        @mouseover="menuAnimations.scaleUpMenuItem(item.id)"
-        @mouseleave="menuAnimations.resetMenuItemScale(item.id)"
-      >
-        <a :href="item.link" class="header__menu-mobile-link">{{
-          item.title
-        }}</a>
-      </div>
-    </nav>
-
-    <div class="header__brand">
-      <a href="/">
-        <BrandIcon class="header__logo" />
-        <span class="header__title">{{ brandTitle }}</span>
-      </a>
-    </div>
-
-    <div class="header__right-side">
-      <nav class="header__menu">
-        <div class="header__menu-item" v-for="item in navItems" :key="item.id">
-          <a :href="item.link" class="header__menu-link">{{ item.title }}</a>
+  <section-wrapper>
+    <header class="header">
+      <nav class="header__menu-mobile">
+        <button
+          class="hide-menu-btn hide-menu"
+          @click="menuAnimations.hideMenu"
+        >
+          <CrossIcon class="hide-menu-icon" />
+        </button>
+        <div
+          v-for="item in navItems"
+          :key="item.id"
+          :class="`header__menu-mobile-item menu-mobile-item${item.id}`"
+          @mouseover="menuAnimations.scaleUpMenuItem(item.id)"
+          @mouseleave="menuAnimations.resetMenuItemScale(item.id)"
+        >
+          <a :href="item.link" class="header__menu-mobile-link">{{
+            item.title
+          }}</a>
         </div>
       </nav>
-
-      <!-- <button class="header__sign-up">SIGN UP</button> -->
-      <base-button class="header__sign-up">SIGN UP</base-button>
-      <button
-        class="header__menu-mobile-btn show-menu"
-        @click="menuAnimations.showMenu"
-      >
-        <MenuIcon class="header__menu-mobile-icon" />
-      </button>
-    </div>
-  </header>
+      <div class="header__brand">
+        <a href="/">
+          <BrandIcon class="header__logo" />
+          <span class="header__title">{{ brandTitle }}</span>
+        </a>
+      </div>
+      <div class="header__right-side">
+        <nav class="header__menu">
+          <div
+            class="header__menu-item"
+            v-for="item in navItems"
+            :key="item.id"
+          >
+            <a :href="item.link" class="header__menu-link">{{ item.title }}</a>
+          </div>
+        </nav>
+        <!-- <button class="header__sign-up">SIGN UP</button> -->
+        <base-button class="header__sign-up">SIGN UP</base-button>
+        <button
+          class="header__menu-mobile-btn show-menu"
+          @click="menuAnimations.showMenu"
+        >
+          <MenuIcon class="header__menu-mobile-icon" />
+        </button>
+      </div>
+    </header>
+  </section-wrapper>
 </template>
 
 <style scoped>

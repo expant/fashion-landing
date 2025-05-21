@@ -128,12 +128,6 @@ const { marqueeContainer } = useMarquee(marqueeDuration);
   align-items: center;
 }
 
-/* .brands__item img {
-  height: 2.5rem;
-  width: auto;
-  object-fit: contain;
-} */
-
 .brands__item-hnm {
   width: 4.7rem;
 }
@@ -222,8 +216,5 @@ const { marqueeContainer } = useMarquee(marqueeDuration);
   .brands__item-amazon {
     width: 3rem;
   }
-}
-
-@media (max-width: 400px) {
 }
 </style>

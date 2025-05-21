@@ -1,30 +1,33 @@
 <script setup>
+import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 </script>
 
 <template>
-  <section class="hero">
-    <h1 class="hero__title">
-      <div class="hero__title-word">
-        <div class="rectangle rectangle_white"></div>
-        <div class="hero__title-word-text">LET’S</div>
-      </div>
-      EXPLORE
-      <div class="hero__title-word">
-        <div class="rectangle rectangle_yellow"></div>
-        <div class="hero__title-word-text">UNIQUE</div>
-      </div>
-      CLOTHES.
-    </h1>
-    <p class="hero__text">Live for Influential and Innovative fashion!</p>
-    <!-- <button class="hero__btn">Shop Now</button> -->
-    <base-button class="hero__btn">Shop Now</base-button>
-    <img
-      class="hero_img"
-      src="../assets/images/hero_girl.png"
-      alt="hero section girl"
-    />
-  </section>
+  <section-wrapper>
+    <section class="hero">
+      <h1 class="hero__title">
+        <div class="hero__title-word">
+          <div class="rectangle rectangle_white"></div>
+          <div class="hero__title-word-text">LET’S</div>
+        </div>
+        EXPLORE
+        <div class="hero__title-word">
+          <div class="rectangle rectangle_yellow"></div>
+          <div class="hero__title-word-text">UNIQUE</div>
+        </div>
+        CLOTHES.
+      </h1>
+      <p class="hero__text">Live for Influential and Innovative fashion!</p>
+      <!-- <button class="hero__btn">Shop Now</button> -->
+      <base-button class="hero__btn">Shop Now</base-button>
+      <img
+        class="hero_img"
+        src="../assets/images/hero_girl.png"
+        alt="hero section girl"
+      />
+    </section>
+  </section-wrapper>
 </template>
 
 <style scoped>

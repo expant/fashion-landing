@@ -1,41 +1,42 @@
 <script setup>
+import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import StarIcon from "@/components/icons/StarIcon.vue";
 import girlImg from "@/assets/images/banner-girl.png";
 </script>
 
 <template>
-  <section class="banner">
-    <StarIcon class="banner__star star1" />
-    <StarIcon class="banner__star star2" />
-    <StarIcon class="banner__star star3" />
-    <StarIcon class="banner__star star4" />
-
-    <img class="banner__img" :src="girlImg" alt="girl on the banner" />
-    <div class="banner__text">
-      <h3 class="banner__title">
-        <div class="banner__title-word">
-          <div class="rectangle rectangle_white"></div>
-          <div class="banner__title-word-text">PAYDAY</div>
+  <div class="bg-wrapper">
+    <section-wrapper>
+      <section class="banner">
+        <StarIcon class="banner__star star1" />
+        <StarIcon class="banner__star star2" />
+        <StarIcon class="banner__star star3" />
+        <StarIcon class="banner__star star4" />
+        <img class="banner__img" :src="girlImg" alt="girl on the banner" />
+        <div class="banner__text">
+          <h3 class="banner__title">
+            <div class="banner__title-word">
+              <div class="rectangle rectangle_white"></div>
+              <div class="banner__title-word-text">PAYDAY</div>
+            </div>
+            SALE NOW
+          </h3>
+          <p class="banner__description">
+            Spend minimal $100 get 30% off voucher code for your next purchase
+          </p>
+          <div class="banner__date">1 June - 10 June 2021</div>
+          <div class="banner__terms">*Terms & Conditions apply</div>
+          <base-button class="banner__btn">SHOP NOW</base-button>
         </div>
-        SALE NOW
-      </h3>
-      <p class="banner__description">
-        Spend minimal $100 get 30% off voucher code for your next purchase
-      </p>
-      <div class="banner__date">1 June - 10 June 2021</div>
-      <div class="banner__terms">*Terms & Conditions apply</div>
-      <base-button class="banner__btn">SHOP NOW</base-button>
-    </div>
-  </section>
+      </section>
+    </section-wrapper>
+  </div>
 </template>
 
 <style scoped>
-.banner {
-  position: relative;
-  display: grid;
-  grid-template-columns: 41.17rem 38.8725rem;
-  height: 40.35rem;
+.bg-wrapper {
+  width: 100vw;
   background: linear-gradient(
     to top,
     #e0c340 0%,
@@ -59,6 +60,15 @@ import girlImg from "@/assets/images/banner-girl.png";
     #fae157 93%,
     #f9df56 100%
   );
+}
+
+.banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 41.17rem 38.8725rem;
+  justify-content: center;
+  max-width: 100%;
+  height: 40.35rem;
 }
 
 .banner__star {

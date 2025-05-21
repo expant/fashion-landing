@@ -1,4 +1,5 @@
 <script setup>
+import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
 import card1 from "@/assets/images/youngs-favourite/card1.png";
 import card2 from "@/assets/images/youngs-favourite/card2.png";
@@ -21,28 +22,34 @@ const cards = [
 </script>
 
 <template>
-  <section class="favourite">
-    <h3 class="favourite__title">
-      <img
-        class="favourite__title-img"
-        src="../assets/images/youngs-favourite/title-bg.png"
-        alt="title image on background "
-      />
-      <span class="favourite__title-text">{{ title }}</span>
-    </h3>
-    <div class="favourite__cards">
-      <div class="favourite__card" v-for="card in cards" :key="card.id">
-        <img class="favourite__card-img" :src="card.img" alt="favourite girl" />
-        <div class="favourite__card-down">
-          <div class="card-down__text">
-            <div class="favourite__card-title">{{ card.title }}</div>
-            <div class="favourite__card-text">{{ card.text }}</div>
+  <section-wrapper>
+    <section class="favourite">
+      <h3 class="favourite__title">
+        <img
+          class="favourite__title-img"
+          src="../assets/images/youngs-favourite/title-bg.png"
+          alt="title image on background "
+        />
+        <span class="favourite__title-text">{{ title }}</span>
+      </h3>
+      <div class="favourite__cards">
+        <div class="favourite__card" v-for="card in cards" :key="card.id">
+          <img
+            class="favourite__card-img"
+            :src="card.img"
+            alt="favourite girl"
+          />
+          <div class="favourite__card-down">
+            <div class="card-down__text">
+              <div class="favourite__card-title">{{ card.title }}</div>
+              <div class="favourite__card-text">{{ card.text }}</div>
+            </div>
+            <ArrowIcon />
           </div>
-          <ArrowIcon />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </section-wrapper>
 </template>
 
 <style scoped>
@@ -96,7 +103,7 @@ const cards = [
 }
 
 .favourite__card-img {
-  width: 34.75rem;
+  width: 34rem;
 }
 
 .favourite__card-down {

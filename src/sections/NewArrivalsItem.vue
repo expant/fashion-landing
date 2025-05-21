@@ -1,4 +1,5 @@
 <script setup>
+import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
 import card1 from "@/assets/images/arrivals/card1.png";
 import card2 from "@/assets/images/arrivals/card2.png";
@@ -28,32 +29,34 @@ const cards = [
 </script>
 
 <template>
-  <section class="new-arrivals">
-    <h3 class="new-arrivals__title">
-      <img
-        class="new-arrivals__title-img"
-        src="../assets/images/subtitle-bg-img.png"
-        alt="title image on background "
-      />
-      <span class="new-arrivals__title-text">{{ title }}</span>
-    </h3>
-    <div class="new-arrivals__cards">
-      <div class="new-arrivals__card" v-for="card in cards" :key="card.id">
+  <section-wrapper>
+    <section class="new-arrivals">
+      <h3 class="new-arrivals__title">
         <img
-          class="new-arrivals__card-img"
-          :src="card.img"
-          alt="new-arrivals girl"
+          class="new-arrivals__title-img"
+          src="../assets/images/subtitle-bg-img.png"
+          alt="title image on background "
         />
-        <div class="new-arrivals__card-down">
-          <div class="card-down__text">
-            <div class="new-arrivals__card-title">{{ card.title }}</div>
-            <div class="new-arrivals__card-text">{{ card.text }}</div>
+        <span class="new-arrivals__title-text">{{ title }}</span>
+      </h3>
+      <div class="new-arrivals__cards">
+        <div class="new-arrivals__card" v-for="card in cards" :key="card.id">
+          <img
+            class="new-arrivals__card-img"
+            :src="card.img"
+            alt="new-arrivals girl"
+          />
+          <div class="new-arrivals__card-down">
+            <div class="card-down__text">
+              <div class="new-arrivals__card-title">{{ card.title }}</div>
+              <div class="new-arrivals__card-text">{{ card.text }}</div>
+            </div>
+            <ArrowIcon />
           </div>
-          <ArrowIcon />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </section-wrapper>
 </template>
 
 <style scoped>
