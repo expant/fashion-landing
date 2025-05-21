@@ -2,7 +2,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import gsap from "gsap";
 import debounce from "@/utils/debounce";
 
-export function useMarquee() {
+export function useMarquee(duration) {
   const marqueeContainer = ref(null);
 
   const playMarquee = () => {
@@ -14,9 +14,9 @@ export function useMarquee() {
         item,
         {
           x: "-100vw",
-          duration: 15,
           repeat: -1,
           ease: "none",
+          duration,
         },
         "<"
       );

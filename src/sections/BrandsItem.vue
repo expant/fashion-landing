@@ -1,7 +1,8 @@
 <script setup>
 import { useMarquee } from "../animations/composables/useMarquee";
 
-const { marqueeContainer } = useMarquee();
+const marqueeDuration = 15;
+const { marqueeContainer } = useMarquee(marqueeDuration);
 </script>
 
 <template>
