@@ -1,6 +1,7 @@
 <script setup>
 import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
+import { useCardAnimations } from "@/animations/composables/useCardAnimations.js";
 import card1 from "@/assets/images/arrivals/card1.png";
 import card2 from "@/assets/images/arrivals/card2.png";
 import card3 from "@/assets/images/arrivals/card3.png";
@@ -26,6 +27,8 @@ const cards = [
     text: "Explore Now!",
   },
 ];
+
+const cardAnimations = useCardAnimations();
 </script>
 
 <template>
@@ -40,7 +43,13 @@ const cards = [
         <span class="new-arrivals__title-text">{{ title }}</span>
       </h3>
       <div class="new-arrivals__cards">
-        <div class="new-arrivals__card" v-for="card in cards" :key="card.id">
+        <div
+          v-for="card in cards"
+          :key="card.id"
+          :class="`new-arrivals__card card${card.id}`"
+          @mousemove="(e) => cardAnimations.onMouseMove(e, `card${card.id}`)"
+          @mouseleave="() => cardAnimations.onMouseLeave(`card${card.id}`)"
+        >
           <img
             class="new-arrivals__card-img"
             :src="card.img"
@@ -108,6 +117,7 @@ const cards = [
 .new-arrivals__card {
   flex-direction: column;
   gap: 1.22rem;
+  cursor: pointer;
 }
 
 .new-arrivals__card-img {

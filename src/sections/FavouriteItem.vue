@@ -1,4 +1,5 @@
 <script setup>
+import { useCardAnimations } from "@/animations/composables/useCardAnimations.js";
 import SectionWrapper from "@/layouts/SectionWrapper.vue";
 import ArrowIcon from "@/components/icons/ArrowIcon.vue";
 import card1 from "@/assets/images/youngs-favourite/card1.png";
@@ -19,6 +20,8 @@ const cards = [
     text: "Explore Now!",
   },
 ];
+
+const cardAnimations = useCardAnimations();
 </script>
 
 <template>
@@ -33,7 +36,17 @@ const cards = [
         <span class="favourite__title-text">{{ title }}</span>
       </h3>
       <div class="favourite__cards">
-        <div class="favourite__card" v-for="card in cards" :key="card.id">
+        <div
+          v-for="card in cards"
+          :key="card.id"
+          :class="`favourite__card favourite__card${card.id}`"
+          @mousemove="
+            (e) => cardAnimations.onMouseMove(e, `favourite__card${card.id}`)
+          "
+          @mouseleave="
+            () => cardAnimations.onMouseLeave(`favourite__card${card.id}`)
+          "
+        >
           <img
             class="favourite__card-img"
             :src="card.img"
